@@ -1,5 +1,25 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## What this app does
+
+IDT Bulk Ordering is a small frontend for automating large oligo/probe orders to IDT.
+It uses a modern web stack (Next.js + React, Tailwind, Zod) and a tiny local automation agent that drives a browser (Selenium / Chromedriver)
+to eliminate repetitive copy/paste when placing many orders.
+
+Key QoL features (blunt):
+- Multi-line editor for oligos and probes (add/remove/insert many rows).
+- Per-line validation (DNA IUPAC chars, per-scale length checks) so you catch errors early.
+- Import / export JSON, localStorage autosave, and a simple order-code generator.
+- Local agent integration: shows agent Online/Offline and can POST prepared lines to a local Selenium agent for automated entry into IDT.
+
+Currently, only ordering oligos is implemented.
+
+Planned next steps:
+- Add support for probes.
+- Implement extra QoL features such as preset sequences, library of sequences to save to/import from, ect.
+- Begin work on BLAST integration and AI-assisted features.
+- Expand testing to detect additional IDT errors.
+
 ## Getting Started
 
 First, run the development server:
